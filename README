@@ -1,16 +1,15 @@
-This is free open-source Project for you.
-Licensed under GPL v3.
+cardSORTER is web based tool being developed to implement the cardsorting methodology frequency used in social science research .
+It is Free/open-sourced and Licensed under GPL v3.
 
-cardSORTER is being developed to implement the cardsorting methodology frequency used in social science research .
 
+Developed by Victor D.
 hello@denvycom.com
-
 http://denvycom.com/blog
-
 GIT https://github.com/chuvidi2003/cardsorter
 
-Used plugins
 
+
+Used plugins
 Bootstrap theme by devoops.  http://devoops.me
 jQuery-Knob http://anthonyterrien.com/knob/ (MIT or GPL)  1.2.5
 D3 http://d3js.org/ 3.4.1 AS IS
