@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Card Sorter</title>
+		<title>Card Sorter - Card Sorting Tool for Social Science Research</title>
 		<meta name="description" content="description">
-		<meta name="author" content="DevOOPS">
+		<meta name="author" content="denvycom">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="plugins/bootstrap/bootstrap.css" rel="stylesheet">
 		<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
@@ -64,13 +64,7 @@
 					</div>
 					<div class="col-xs-4 col-sm-8 top-panel-right">
 						<ul class="nav navbar-nav pull-right panel-menu">
-							<li class="hidden-xs">
-								<a href="index.html" class="modal-link">
-									<i class="fa fa-bell"></i>
-									<span class="badge">7</span>
-								</a>
-							</li>
-							
+							 	
 							
 						</ul>
 					</div>
@@ -87,19 +81,29 @@
 			<ul class="nav main-menu">
 				<li>
 					<a href="ajax/page_welcome.html" class="active ajax-link">
-						<i class="fa fa-dashboard"></i>
+						<i class="fa fa-users"></i>
 						<span class="hidden-xs">Welcome</span>
 					</a>
 				</li>
+                <li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-book"></i>
+						<span class="hidden-xs">Code Book</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="ajax-link" href="ajax/instructions.html">Codes </a></li>
+						<li><a class="ajax-link" href="ajax/page_training.html">Try Out </a></li>
+					</ul>
+				</li>
                 <li>
 					<a href="ajax/page_training.html" class="ajax-link">
-						<i class="fa fa-bullhorn"></i>
+						<i class="fa fa-bar-chart-o"></i>
 						<span class="hidden-xs">Training</span>
 					</a>
 				</li>
                 <li>
 					<a href="ajax/page_start.html" class=" ajax-link">
-						<i class="fa fa-play-circle"></i>
+						<i class="fa fa-pencil-square-o"></i>
 						<span class="hidden-xs">Start!</span>
 					</a>
 				</li>
