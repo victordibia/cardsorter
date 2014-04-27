@@ -1,14 +1,17 @@
-This is free open-source bootstrap 3 theme for you.
+This is free open-source Project for you.
 Licensed under GPL v3.
 
-DevOOPS (devoopsme@gmail.com)
+cardSORTER is being developed to implement the cardsorting methodology frequency used in social science research .
 
-http://devoops.me
+hello@denvycom.com
 
-GIT https://github.com/devoopsme/devoops
+http://denvycom.com/blog
+
+GIT https://github.com/chuvidi2003/cardsorter
 
 Used plugins
 
+Bootstrap theme by devoops.  http://devoops.me
 jQuery-Knob http://anthonyterrien.com/knob/ (MIT or GPL)  1.2.5
 D3 http://d3js.org/ 3.4.1 AS IS
 Select2 https://github.com/ivaynberg/select2  3.4.5 GPL2
