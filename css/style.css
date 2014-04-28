@@ -185,6 +185,9 @@ a.show-sidebar:hover {
   position: relative;
   margin-left: 20px;
 }
+.whitepadded {
+background:#FFF; padding: 10px ;	
+}
 #search > input {
   width: 80%;
   background: #dfdfdf;
@@ -1220,6 +1223,13 @@ td.beauty-hover {
 .knob {
   border:0;
   background: 0;
+}
+.cardshadow {
+box-shadow: 0 0 10px #525252;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;	
 }
 .box-pricing:hover {
   box-shadow: 0 0 10px #525252;
