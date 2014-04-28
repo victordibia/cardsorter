@@ -78,8 +78,7 @@ $totalRows_rsconstructs = mysql_num_rows($rsconstructs);
 	          </div>
 	        <div class="row-fluid bg-default">
 	          <div class="col-sm-6"></div>
-	          <div class="col-sm-6">
-	            </div>
+	          <div class="col-sm-6"></div>
 	          <div class="clearfix"></div>
 	          </div>
 	        </div>
