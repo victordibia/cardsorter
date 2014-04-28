@@ -12,6 +12,11 @@ body {
 .body-screensaver {
   overflow: hidden;
 }
+.darkborder {
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	}
 h1, .h1, h2, .h2, h3, .h3 {
   margin:0;
 }
@@ -324,6 +329,9 @@ a.show-sidebar:hover {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+.boxme{
+	box-shadow: 0 0 10px #333333;
+	}
 .full-content .box {
   border: 0;
   margin-bottom: 0;
@@ -345,7 +353,8 @@ a.show-sidebar:hover {
 }
 .box-name, .modal-header-name {
   padding-left: 15px;
-  line-height: 28px;
+  line-height: 20px;
+  
 }
 .box-name:hover {
   cursor: move;
@@ -1213,7 +1222,7 @@ td.beauty-hover {
   background: 0;
 }
 .box-pricing:hover {
-  box-shadow: 0 0 5px #525252;
+  box-shadow: 0 0 10px #525252;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -1233,7 +1242,7 @@ td.beauty-hover {
   background-color: #f9f9f9;
 }
 .box-pricing .box-header {
-  height: 80px;
+  height: 50px;
   padding: 10px 0;
 }
 .box-pricing .box-name {
