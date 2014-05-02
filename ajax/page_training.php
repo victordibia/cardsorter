@@ -89,15 +89,35 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
 
 <div class="col-xs-12 row-fluid whitepadded" style="border-bottom:1px solid #CCC;">
                 
-					<div class="col-sm-12 constructs" >
+					<div class="col-sm-12 constructbox" >
 						
-						<?php do { ?>
-					    <div class="radio col-sm-3" >
-						    <label class="constructs" data-placement="top"   data-toggle="tooltip"  title="<?php echo $row_rsconstructs['description']; ?>">
-						      <input type="radio" name="<?php echo $row_rsconstructs['group']; ?>" > <?php echo $row_rsconstructs['title']; ?>
+<?php 
+$groupname = "" ;
+$colorindex = 0 ;
+$colors = array("#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FFFF"," #007FFF"," #0000FF","#7F00FF"," #FF0000") ;
+do { 
+
+?>
+
+<?php if ($groupname != $row_rsconstructs['constructgroup']) { 
+$groupname = $row_rsconstructs['constructgroup'] ;
+$colorindex =($colorindex + 1) % count($colors) ;
+
+?>
+
+<?php } ?>
+
+<div class="radio col-sm-3" style="border-bottom:5px solid <?php echo $colors[$colorindex] ;?>; padding-bottom:10px; margin-right:0px;" >
+					    
+						   <div  > 
+                           <label class="constructs" data-placement="top"   data-toggle="tooltip"  title="<?php echo $row_rsconstructs['description']; ?>">
+						      <input type="radio" name="<?php echo $row_rsconstructs['constructgroup']; ?>" > <?php echo $row_rsconstructs['title']; ?>
 						      <i class="fa fa-circle-o"></i>
 					      </label>
-				        </div>
+                          </div>
+                           
+				        </div> 
+                       
 						  <?php } while ($row_rsconstructs = mysql_fetch_assoc($rsconstructs)); ?>
 					</div>
 </div>
@@ -147,32 +167,90 @@ function DemoTimePicker(){
 	$('#input_time').timepicker({setDate: new Date()});
 }
 $(document).ready(function() {
- 
+    //variable to keep all responses.
+	var responses ;
+	var responserow = [] ; // each question response
+	var numconstructs = $('.constructbox').children().length ;
+	var numquestions = $('.cardbox').children().length ;
+	var currentindex = $('.cardboxholder').children(":first").attr("id") ;
+	var nextindex  ;
+		
+	//alert(numquestions) ;
+	 
+    
 	$('.constructs').tooltip(); 
 	
 	// Display the first train data
 	$('.cardboxholder').html($('.cardbox').children(":first").html());
 	 
-	$('.nextbutton').on('click', function () {
-		var currentindex = $('.cardboxholder').children(":first").attr("id")
-		var nextindex = (currentindex *1 + 1) ;
-		//alert(nextindex) ;
-		if ($('.cardbox').find('#'+nextindex).length > 0){
-			$('.cardboxholder').html($('.cardbox').find('#'+nextindex).parent().html());
-			$('.cardboxholder').hide();
-			$('.cardboxholder').fadeIn( "slow", function() {});
-		}
-	});
 	
+	//On next button Click
 	$('.previousbutton').on('click', function () {
-		var currentindex = $('.cardboxholder').children(":first").attr("id")
-		var nextindex = (currentindex *1 - 1) ;
+		currentindex = $('.cardboxholder').children(":first").attr("id") ;
+		nextindex = (currentindex *1 - 1) ;		
+		saveCurrentState(currentindex) ;
 		//alert($('.cardbox').find('#'+nextindex).length) ;
 		if ($('.cardbox').find('#'+nextindex).length > 0){
 			$('.cardboxholder').html($('.cardbox').find('#'+nextindex).parent().html());
 			$('.cardboxholder').hide();
 			$('.cardboxholder').fadeIn( "slow", function() {});
+			loadState(nextindex) ;	
 		}
+			
 	});
+	
+	//On next button click 
+	$('.nextbutton').on('click', function () {
+		currentindex = $('.cardboxholder').children(":first").attr("id") ;
+		nextindex = (currentindex *1 + 1) ;
+		//Save state
+		saveCurrentState(currentindex);	
+		//alert(nextindex) ;
+		if ($('.cardbox').find('#'+nextindex).length > 0){
+					
+			$('.cardboxholder').html($('.cardbox').find('#'+nextindex).parent().html());
+			$('.cardboxholder').hide();
+			$('.cardboxholder').fadeIn( "slow", function() {});
+			currentindex = nextindex ;
+			loadState(nextindex) ;
+		}
+		
+	});
+	function saveCurrentState(index){
+		var state = "" ;
+		$('.constructbox').children().each(function () { 			 
+			if ( $(this).find('input').is(':checked') ){
+				state += "1" ;
+			}else {
+			    state += "0" ;
+			}
+		});
+		//alert ( index + " - " + state ) ;
+		responserow[index] = state ;
+		console.log("Saving to spot " + index + " - " + state);
+     }
+	 
+	function loadState(index){
+      //	alert($('.constructbox').children(':nth-child(2)').html());
+		if (typeof responserow[index] == "undefined" ){
+			console.log("Nothing to load - " + " - " + index );
+			// Reset the radio buttons
+			$('.constructbox').find('input').prop('checked', false); 			
+		}else {
+			//load the values
+			console.log("Loading  " + responserow[index] + " - " + index);
+			//alert(responserow[index].length);	
+			for (var i=1; i < responserow[index].length +1; i++) {
+				//alert("Char at " + i + " = " + responserow[index].charAt(i - 1) + " \n" + $('.constructbox').find(':nth-child(' + i + ')').html() );
+				if ( responserow[index].charAt(i-1) == "1" ){
+					//$(this).find('input:nth-child(' + i + ')').prop('checked', true) ; 
+					$('.constructbox').children(':nth-child(' + i + ')').find('input').prop('checked', true) ; 
+					//console.log("1"  );
+				}else {
+				  $('.constructbox').children(':nth-child(' + i + ')').find('input').prop('checked', false) ;
+				}
+			} 
+		}
+	}
 });
 </script>
