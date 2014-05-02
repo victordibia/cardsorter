@@ -114,8 +114,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
                          </a>
                           </div>
 	          <div class="col-sm-4" align="center">
-                          <p class="page-header"><strong>Progress </strong> <code> Card 1 of 5 </code></p>
-                          </div>
+                           </div>
                           <div class="col-sm-4" align="right">
                           <a   class="nextbutton" style="cursor:pointer" >
                           <p class="page-header"><strong>Next </strong> <i class="fa fa-angle-double-right"></i></p>
