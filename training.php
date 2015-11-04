@@ -182,6 +182,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
                
             </div>    
             
+            <div id="response"> bb</div>
             
           </section><!-- /.content -->
         </div><!-- /.content-wrapper -->
