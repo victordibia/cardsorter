@@ -113,15 +113,22 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
                     </div>
                     
                </div>
+                 <div id="loadprogress" class="loadtext"> <i class="fa fa-fw fa-hourglass"></i>  Loading saved responses .. </div>
+                 <div class="progress progress-xxs">
+                    <div id="progressstatus" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
                 <div class="box-body cardboxholder ">
                 sdf
                 </div>
+               
             </div>    
             <!-- Default box -->
             <div class="row cardbox" style="display:none;">
             <?php  $i = 1 ; do { ?>
             <div class="box carditem" >
-             <div class="whitepadded " id="<?php echo $i; ?>" , dbid="<?php echo $row_rstraindata['id']; ?>">             
+             <div class="codecard" id="<?php echo $i; ?>" , dbid="<?php echo $row_rstraindata['id']; ?>">           
               <?php echo $row_rstraindata['description']; ?>   
              </div> 
             </div>
@@ -136,7 +143,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
               <?php 
             $groupname = "" ;
             $colorindex = 0 ;
-            $colors = array("#FF0000","#FF7F00","#FFFF00","#7FFF00","#00FFFF"," #007FFF"," #0000FF","#7F00FF"," #FF0000") ;
+            $colors = array("#3c8dbc","#00c0ef","#00a65a","#f39c12","#f56954"," #d2d6de"," #0000FF","#7F00FF"," #FF0000") ;
             do { 
             
             ?>
@@ -149,7 +156,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
             
             <?php } ?>
 				<div  class="col-md-4" style="padding:10px;  ">
-				<div class="codeboxb" style="border-bottom:5px solid <?php echo $colors[$colorindex] ;?>;" >
+				<div class="codeboxb" style="border-bottom:3px solid <?php echo $colors[$colorindex] ;?>;" >
 					<div class="form-group" style=" height:100%;  margin:0px;" align="center" >
                     <label class="constructs" data-placement="top"   data-toggle="tooltip"  title="<?php echo $row_rsconstructs['description']; ?>" style="width:100%; padding:10px; border: 1px solid #ccc; margin:0px;">
 					<input type="checkbox"   dbid="<?php echo $row_rsconstructs['id']; ?>" name="<?php echo $row_rsconstructs['group']; ?>" > <?php echo $row_rsconstructs['title']; ?>
@@ -182,7 +189,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
                
             </div>    
             
-            <div id="response"> bb</div>
+            <div id="response" class="loadtext"> </div>
             
           </section><!-- /.content -->
         </div><!-- /.content-wrapper -->

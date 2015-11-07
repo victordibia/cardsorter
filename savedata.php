@@ -47,8 +47,8 @@ if(isset($_POST['responsedata'])) {
     //in here you have the key in $keyName and the value in $value
      // echo $rowid ; //= $value;
 	 foreach ($content as $value){
-	 	echo $rowid . " - " . $value["id"].":".$value["state"] . " |  " ;
-		echo ifRecordExists($rowid, $value["id"], $conncard)  ? 'true' : 'false'; 
+	 	//echo $rowid . " - " . $value["id"].":".$value["state"] . " |  " ;
+		//echo ifRecordExists($rowid, $value["id"], $conncard)  ? 'true' : 'false'; 
 		
 		// if it exists, we update it else we insert it.
 		if (ifRecordExists($rowid, $value["id"], $conncard)) {
