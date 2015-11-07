@@ -15,6 +15,22 @@ $(document).ready(function() {
 	
 	$('.constructs').tooltip(); 
 	
+	//BInd left and right arrow keys to prev and next button
+	$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+		$('.previousbutton').first().click();
+        break;
+
+        case 39: // right
+		$('.nextbutton').first().click();
+        break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+	});
+	
 	
 	// Display the first train data
 	$('.cardboxholder').html($('.cardbox').children(":first").html());
