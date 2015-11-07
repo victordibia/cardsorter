@@ -1,0 +1,31 @@
+/* CSS Document */
+
+.codebox:hover {
+	 box-shadow: 3px 3px 3px   #888888;
+	 cursor:pointer;
+}
+.codecard {
+	font-size:16px ; 
+	color:#666;
+	padding: 10px;
+}
+.codeboxb {
+	 
+}
+.codeboxb:hover {
+	 background:#00A65A;  
+	 color: #fff;
+}
+
+.loadtext {
+ color:#FFF ;
+ padding: 10px 10px 10px 10px ;   
+ background: #00a65a ;
+}
+
+.cardresponse {
+ border: 2px solid #fff ;
+ font-weight:bold ;
+ padding: 0px 5px 2px 5px ;
+  margin:  0px 5px 0px 5px ;
+}
