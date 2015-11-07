@@ -24,12 +24,12 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview active">
-              <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Welcome</span></a>            </li>
-            <li class="treeview "><a href="codes.php">Code Book</a></li>
-            <li class="treeview "><a href="training.php"><span>Training</span></a></li>
-            <li><a href="task.php"><span>Start Task </span></a>            </li>
+            <li class="treeview " id="index">
+              <a href="index.php">
+            <i class="fa fa-home"></i> <span>Welcome</span></a>            </li>
+            <li class="treeview " id="codebook"><a href="codes.php">   <i class="fa fa-bookmark"></i>Code Book</a></li>
+            <li class="treeview " id="training"><a href="training.php">  <i class="fa fa-bank"></i><span>Training</span></a></li>
+            <li class="treeview " id="tasks"><a href="tasks.php">  <i class="fa fa-briefcase"></i><span>Tasks</span></a></li>
           </ul>
         </section>
         <!-- /.sidebar -->

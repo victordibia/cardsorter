@@ -85,8 +85,8 @@ $totalRows_rscodes = mysql_num_rows($rscodes);
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              Task Codes
-              <small>task codes</small></h1>
+              Code Book
+              <small>Definitions of constructs/categories. </small></h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
               <li><a href="#">Layout</a></li>
@@ -142,18 +142,7 @@ $totalRows_rscodes = mysql_num_rows($rscodes);
      
 <!-- ./wrapper -->
 
-    <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- SlimScroll -->
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
-    <script src="plugins/fastclick/fastclick.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+   
   </body>
 </html>
 <?php

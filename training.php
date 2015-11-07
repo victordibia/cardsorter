@@ -113,7 +113,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
                     </div>
                     
                </div>
-                 <div id="loadprogress" class="loadtext"> <i class="fa fa-fw fa-hourglass"></i>  Loading saved responses .. </div>
+                  
                  <div class="progress progress-xxs">
                     <div id="progressstatus" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
                       <span class="sr-only">60% Complete (warning)</span>
@@ -189,7 +189,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
                
             </div>    
             
-            <div id="response" class="loadtext"> </div>
+            <div id="response" class="loadtext">  <i class="fa fa-fw fa-hourglass"></i>  Loading saved responses from database ..  </div>
             
           </section><!-- /.content -->
         </div><!-- /.content-wrapper -->
@@ -205,18 +205,7 @@ $totalRows_rstraindata = mysql_num_rows($rstraindata);
      
 <!-- ./wrapper -->
 
-    <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- SlimScroll -->
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="plugins/iCheck/icheck.min.js"></script>
-    <!-- FastClick -->
-    <script src="plugins/fastclick/fastclick.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
+   
     <script src="dist/js/training.js"></script>
   </body>
 </html>

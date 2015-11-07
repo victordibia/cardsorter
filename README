@@ -1,5 +1,23 @@
-cardSORTER is a web based tool being developed to implement the cardsorting methodology frequently used in social science research .
-It is Free/open-sourced and Licensed under GPL v3.
+
+Welcome to cardSORTER Beta!
+===================
+----------
+cardSORTER is a web based tool being developed to implement the cardsorting methodology frequently used in social science research . Cartsorting in this case also applies to quantitative coding of text data by multiple raters.
+
+License
+-------
+----------
+cardSORTER is an open source project by [Victor Dibia, Denvycom](https://victordibia.com) that is licensed under [MIT](http://opensource.org/licenses/MIT). Denvycom
+reserves the right to change the license of future releases.
+
+Todo List
+---------
+----------
+Features to be implemented
+
+- Allow creation of Categories/Construct
+- Report/Chart Generation
+sdfd
 
 
 Developed by Victor D.
@@ -29,3 +47,5 @@ Fullcalendar http://arshaw.com/fullcalendar 2.0..0beta MIT
 Moment http://momentjs.com/ 2.5.1 MIT
 Justified Gallery https://github.com/miromannino/Justified-Gallery 2.1 Creative Commons 3.0
 Morris Charts http://www.oesmith.co.uk/morris.js/ v0.4.3 MIT
+
+
