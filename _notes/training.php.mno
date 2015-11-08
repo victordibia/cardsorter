@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="UD_rscodes" value="name:id;datatype:int,name:title;datatype:blob,name:description;datatype:blob,name:datemodified;datatype:timestamp,name:group;datatype:string" />
-	<infoitem key="UD_rsconstructs" value="name:id;datatype:int,name:title;datatype:blob,name:description;datatype:blob,name:datemodified;datatype:timestamp,name:group;datatype:string" />
-	<infoitem key="UD_rstraindata" value="name:id;datatype:int,name:title;datatype:blob,name:description;datatype:blob,name:construct;datatype:int,name:datemodified;datatype:timestamp" />
-</info>

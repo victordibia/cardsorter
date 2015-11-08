@@ -1,52 +1,23 @@
+## Laravel PHP Framework
 
-Welcome to cardSORTER Beta!
-===================
-----------
-cardSORTER is a web based tool being developed to implement the cardsorting methodology frequently used in social science research . Cartsorting in this case also applies to quantitative coding of text data by multiple raters.
-![enter image description here](https://github.com/chuvidi2003/cardsorter/blob/master/dist/img/screen.jpg)
+[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-License
--------
-----------
-cardSORTER is an open source project by [Victor Dibia, Denvycom](https://victordibia.com) that is licensed under [MIT](http://opensource.org/licenses/MIT). Denvycom
-reserves the right to change the license of future releases.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-Todo List
----------
-----------
-Features to be implemented
+Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-- Allow creation of Categories/Construct
-- Report/Chart Generation
-sdfd
+## Official Documentation
 
+Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-Developed by Victor D.
-hello@denvycom.com
-http://denvycom.com/blog
-GIT https://github.com/chuvidi2003/cardsorter
+## Contributing
 
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
+### License
 
-Used plugins
-AdminLTE template - https://almsaeedstudio.com/preview
-Bootstrap theme by devoops.  http://devoops.me
-jQuery-Knob http://anthonyterrien.com/knob/ (MIT or GPL)  1.2.5
-D3 http://d3js.org/ 3.4.1 AS IS
-Select2 https://github.com/ivaynberg/select2  3.4.5 GPL2
-Bootstrap Validator https://github.com/nghuuphuoc/bootstrapvalidator 0.2.3 MIT
-TinyMCE http://www.tinymce.com 4.0.16 GPL2
-jQuery Timepicker http://trentrichardson.com/examples/timepicker/ 1.4.3 MIT
-xCharts http://tenxer.github.io/xcharts/ 0.3.0 AS IS
-Fancybox http://fancyapps.com/fancybox/ 2.1.5 ?
-Widen FineUploader https://github.com/Widen/fine-uploader  (GPL3) v 4.3.1
-Datatables  http://datatables.net 1.9.4 GPL or BSD
-jQuery-UI 1.10.4
-Twitter Bootstrap http://getbootstrap.com 3.1.0
-Flot www.flotcharts.org  0.8.2 AS IS
-Fullcalendar http://arshaw.com/fullcalendar 2.0..0beta MIT
-Moment http://momentjs.com/ 2.5.1 MIT
-Justified Gallery https://github.com/miromannino/Justified-Gallery 2.1 Creative Commons 3.0
-Morris Charts http://www.oesmith.co.uk/morris.js/ v0.4.3 MIT
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
