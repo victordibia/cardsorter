@@ -7,7 +7,7 @@ cardSORTER is a web based tool being developed to implement the cardsorting meth
 - **Construct Cardsorting** : Sorting items into multiple constructs to verify initial content validity.
 - **Qualitative Text Coding** : Assigning qualitative text data (e.g interview text, forum text data, other things) into defined category. 
 
-![enter image description here](https://github.com/chuvidi2003/cardsorter/blob/master/dist/img/screen.jpg)
+![enter image description here](https://github.com/chuvidi2003/cardsorter/blob/master/public/img/screen.jpg)
 
 Why create cardSORTER
 -------

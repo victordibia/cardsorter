@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'WelcomeController@index');
+Route::get('/demo', 'PagesController@index');
 Route::get('category', 'PagesController@category');
 Route::get('training', 'PagesController@training');
 Route::get('tasks', 'PagesController@tasks');

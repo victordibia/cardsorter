@@ -29,7 +29,19 @@
 	font-weight: bold;
 	font-size: 18px;
 }
+.carouseltext{
+	
+    color: #fff ;    
+	font-size : 50px ;font-weight: bold ;
+	text-align: center;
+}
+.greencarousel {
+	width: 100%;
+	height: 500px;
+	background: #00a65a; 
+}
 
+}
 .greenback {
 	color: #FFF;
 	padding: 10px 10px 10px 10px;
