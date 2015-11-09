@@ -163,7 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview " id="index">
-              <a href="{{ url('/') }}">
+              <a href="{{ url('/demo') }}">
             <i class="fa fa-home"></i> <span>Welcome</span></a>            </li>
             <li class="treeview " id="category"><a href="{{ url('/category') }}">   <i class="fa fa-bookmark"></i><span>Code Book</span></a></li>
             <li class="treeview " id="training"><a href="{{ url('/training') }}">  <i class="fa fa-bank"></i><span>Training</span></a></li>
