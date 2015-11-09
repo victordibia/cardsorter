@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTraindatasTable extends Migration {
+class CreateTrainItemsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,12 @@ class CreateTraindatasTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('traindatas', function(Blueprint $table)
+		Schema::create('train_items', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('title');
+			$table->string('description');
+			$table->integer('category');
 			$table->timestamps();
 		});
 	}
@@ -26,7 +29,7 @@ class CreateTraindatasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('traindatas');
+		Schema::drop('train_items');
 	}
 
 }
