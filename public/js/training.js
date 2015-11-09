@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     //variable to keep all responses.
 	var responses ;
@@ -9,7 +8,11 @@ $(document).ready(function() {
 	var currentindex = $('.cardboxholder').children(":first").attr("id") ;
 	var nextindex  ;
 		
-	//alert(numquestions) ;
+	$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 	 
     $('.currenttitle').text("Card 1 of " + numquestions) ;
 	
@@ -35,20 +38,25 @@ $(document).ready(function() {
 	// Display the first train data
 	$('.cardboxholder').html($('.cardbox').children(":first").html());
 	UpdateProgressBar(1); 
-	// fetch state from database
-	 
-	$.post( "loaddata.php", { type : "train" } )
-		  .done(function( data ) {
+	
+	
+	$.ajax({
+		  url: "loaddata",
+		  data: {type : "train"},
+		  context: document.body
+		}).done(function(data) {
 			$("#response").fadeOut("fast").fadeIn("fast"); 
 			$("#response").html("Saved data has been loaded from database.") ;
 			row = JSON.parse(data);   
-			//console.log(JSON.stringify(row)); 
+			//console.log(data); 
 			responserow = row ; 
          	currentindex = $('.cardboxholder').children(":first").attr("id") ;
 			dbid = $('.cardbox').find('#'+currentindex).attr("dbid") ;
 			//console.log(JSON.stringify(responserow[dbid]))
-			loadState(currentindex, dbid) ;
- 	}); 
+			loadState(currentindex, dbid) ;   
+	});
+	// fetch state from database
+	 
 	
 	//On next button Click
 	$('.previousbutton').on('click', function () {
@@ -109,12 +117,19 @@ $(document).ready(function() {
 	function saveToDB(data){
 		//console.log(JSON.stringify(data));
 		$("#response").html("Saving to database ..") ;
-		$.post( "savedata.php", { responsedata : JSON.stringify(data) , type : "train" } )
-		  .done(function( data ) {
-			//console.log( "Data Loaded: " + data );
-			$("#response").html("Response for <span class='cardresponse'> Card " + currentindex + " </span> has been saved to database." );
-			//alert();
- 		});
+		//alert();
+		$.ajax({
+			  url: "savedata",
+			  method: "POST",
+			  data: { responsedata : JSON.stringify(data) , responsetype : "train"},
+			  context: document.body
+			}).done(function(data) {
+				//console.log( "Data Loaded: " + data );
+				//$("#response").html("Response for <span class='cardresponse'> Card " + currentindex + " </span> has been saved to database." );
+				$("#response").html(data);
+		});
+		 
+		
 	}
 	 
 	function loadState(index, dbid){
@@ -138,19 +153,5 @@ $(document).ready(function() {
 		}
 	}
 	
-	//iCheck for checkbox and radio inputs
-        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-          checkboxClass: 'icheckbox_minimal-blue',
-          radioClass: 'iradio_minimal-blue'
-        });
-        //Red color scheme for iCheck
-        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-          checkboxClass: 'icheckbox_minimal-red',
-          radioClass: 'iradio_minimal-red'
-        });
-        //Flat red color scheme for iCheck
-        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-          checkboxClass: 'icheckbox_flat-green',
-          radioClass: 'iradio_flat-green'
-        });
+	 
 });

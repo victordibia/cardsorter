@@ -16,7 +16,7 @@ class CreateTrainItemsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title');
-			$table->string('description');
+			$table->longText('description');
 			$table->integer('category');
 			$table->integer('resonpsestatus');
 			$table->timestamps();

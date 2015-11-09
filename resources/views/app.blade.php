@@ -6,6 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
      @yield('title')
     <!-- Tell the browser to be responsive to screen width -->
@@ -23,6 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           apply the skin class to the body tag so the changes take effect.
     -->
     <link rel="stylesheet" href="{{ asset('/css/skins/skin-green.min.css') }} ">
+    <link rel="stylesheet" href="{{ asset('/css/card.css') }} ">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -91,7 +93,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p> @if (Auth::guest())
                         Guest                        
                         @else
-                        {{ Auth::user()->name }} <small> since {{ Auth::user()->created_at }}   </small>
+                        <?php $datesince = date_parse( Auth::user()->created_at) ;?>
+                        {{ Auth::user()->name }} <small> Since {{  date("F j, Y, g:i a", strtotime(Auth::user()->created_at)) }}   </small>
                         @endif                    
                     </p>
                   </li>
@@ -272,6 +275,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- AdminLTE App -->
     <script src="js/app.min.js"></script>
     <script src="js/sidebar.js"></script>
+    
+      @yield('pagescripts')
 
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
          Both of these plugins are recommended to enhance the

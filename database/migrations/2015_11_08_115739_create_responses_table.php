@@ -18,7 +18,7 @@ class CreateResponsesTable extends Migration {
 			$table->integer('userid');
 			$table->integer('itemid');
 			$table->integer('categoryid');
-			$table->integer('resonpsestatus');
+			$table->integer('responsestatus');
 			$table->integer('responsetype');
 			$table->timestamps();
 		});

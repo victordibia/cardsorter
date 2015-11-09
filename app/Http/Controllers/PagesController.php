@@ -3,6 +3,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\train_item;
 class PagesController extends Controller {
 	
 	/*
@@ -28,10 +30,14 @@ class PagesController extends Controller {
 		return view ( 'pages.home' );
 	}
 	public function category() {
-		return view ( 'pages.category' );
+		$categories = category::all();
+		return view ( 'pages.category',  ['categories' => $categories] );
 	}
 	public function training() {
-		return view ( 'pages.training' );
+		$train_items = train_item::all();
+		$categories = category::all();
+		$data = array('categories' =>  $categories, 'train' =>  $train_items);		
+		return view ( 'pages.training')->with($data);;
 	}
 	public function tasks() {
 		return view ( 'pages.tasks' );

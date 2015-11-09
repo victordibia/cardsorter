@@ -18,7 +18,7 @@ class CreateCategoriesTable extends Migration {
 			$table->string('title');
 			$table->string('code');
 			$table->string('description');
-			$table->string('group');
+			$table->string('group')->unique();
 			$table->timestamps();
 		});
 	}
