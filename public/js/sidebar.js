@@ -1,7 +1,6 @@
 $(document).ready(function() {
  var path = window.location.pathname;
  var page = path.split("/").pop();
- console.log( page );
  
 	if (page == "" | page == "/" ){
 		$("treeview").removeClass("active");

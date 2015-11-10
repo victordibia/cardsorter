@@ -40,16 +40,15 @@
 </div>
 
 <div class="row cardbox" style="display: none;">
-             <?php print_r($train); echo "boogle";?>
- 			@foreach ($train as $traindata)
-            <?php  $i = 1 ;  ?>
+             <?php  $i = 1 ;  ?>
+ 			@foreach ($train as $traindata)           
             <div class="box carditem">
-		<div class="codecard" id="<?php echo $i; ?>"
-			, dbid="<?php echo $traindata->id; ?>">   Bingo        
+		<div class="codecard" id="<?php echo $i;  ?>"
+			, dbid="<?php echo $traindata->id; ?>">       
               <?php echo $traindata->description ; ?>   
              </div>
 	</div>
-            <?php $i++ ; ?>
+            <?php $i++ ;?>
                @endforeach 
 </div>
 <!-- /.box -->
