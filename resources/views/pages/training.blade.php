@@ -57,7 +57,7 @@
 	<div class="box-header with-border">
 		<h3 class="box-title">Select Codes that Apply</h3>
 	</div>
-	<div class="box-body constructbox"> 
+	<div class="box-body constructbox categorybox"> 
         <?php   
             $groupname = "" ;
             $colorindex = 0 ;
@@ -72,9 +72,9 @@
         ?>
 				<div class="col-md-4" style="padding: 10px;">
 			<div class="codeboxb" style="border-bottom:3px solid <?php echo $colors[$colorindex] ;?>;" >
-				<div class="form-group" style="height: 100%; margin: 0px;"
+				<div class="" style="height: 100%; margin: 0px;"
 					align="center">
-					<label class="constructs" data-placement="top"
+					<label class="category" data-placement="top"
 						data-toggle="tooltip"
 						title="<?php echo  $category-> description ; ?>"
 						style="width: 100%; padding: 10px; border: 1px solid #ccc; margin: 0px;">

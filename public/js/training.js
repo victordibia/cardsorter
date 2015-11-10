@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var responses ;
 	var responserow = {} ; // each question response
 	var recentrow = {} ; // last saved row
-	var numconstructs = $('.constructbox').children().length ;
+	var numcategory = $('.constructbox').children().length ;
 	var numquestions = $('.cardbox').children().length ;
 	var currentindex = $('.cardboxholder').children(":first").attr("id") ;
 	var nextindex  ;
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	$('.currenttitle').text("Card 1 of " + numquestions) ;
 
-	$('.constructs').tooltip(); 
+	$('.category').tooltip(); 
 
 	//BInd left and right arrow keys to prev and next button
 	$(document).keydown(function(e) {
@@ -57,6 +57,12 @@ $(document).ready(function() {
 	});
 	// fetch state from database
 
+	//On Check Box Click
+	$( ".categorybox").unbind().click(function(){
+		alert($(this).html());
+		//console.log("Bingo");
+	});
+ 
 
 	//On next button Click
 	$('.previousbutton').on('click', function () {
