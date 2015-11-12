@@ -2,7 +2,7 @@ $(document).ready(function() {
  var path = window.location.pathname;
  var page = path.split("/").pop();
  
-	if (page == "" | page == "/" ){
+	if (page == "" | page == "/"  | page == "demo"){
 		$("treeview").removeClass("active");
 		$("#index").addClass("active");
 	}else if (page == "category" ){

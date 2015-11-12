@@ -53,7 +53,7 @@
 
 
 		<a href="{{ url('/password/email') }}">I forgot my password</a><br> 
-		<a href="{{ url('/auth/register') }}"
+		<a href="#"
 			class="text-center">Register a new membership</a>
 		<div>
 			<hr />
