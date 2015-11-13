@@ -15,6 +15,14 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
 		// $this->call('UserTableSeeder');
+		
+		//delete users table records
+		DB::table('users')->delete();
+		//insert some dummy records
+		DB::table('users')->insert(array(
+		array('name'=>'Victor Dibia','email'=>'victor.dibia@gmail.com','password'=> bcrypt('victor')),
+		array('name'=>'Demo One Account','email'=>'demo@gmail.com','password'=> bcrypt('demodemo')),
+		));
 	}
 
 }

@@ -47,22 +47,24 @@ $(document).ready(function() {
 	}).done(function(data) {
 		$("#response").fadeOut("fast").fadeIn("fast"); 
 		$("#response").html("Saved data has been loaded from database.") ;
-		row = JSON.parse(data);   
-		//console.log(data); 
-		responserow = row ; 
-		currentindex = $('.cardboxholder').children(":first").attr("id") ;
-		dbid = $('.cardbox').find('#'+currentindex).attr("dbid") ;
-		//console.log(JSON.stringify(responserow[dbid]))
-		loadState(currentindex, dbid) ;   
+		if (data != "") {
+			row = JSON.parse(data);   
+			//console.log(data); 
+			responserow = row ; 
+			currentindex = $('.cardboxholder').children(":first").attr("id") ;
+			dbid = $('.cardbox').find('#'+currentindex).attr("dbid") ;
+			//console.log(JSON.stringify(responserow[dbid]))
+			loadState(currentindex, dbid) ; 
+		}
 	});
 	// fetch state from database
 
 	//On Check Box Click
 	$( ".categorybox").unbind().click(function(){
-		alert($(this).html());
+		//alert($(this).html());
 		//console.log("Bingo");
 	});
- 
+
 
 	//On next button Click
 	$('.previousbutton').on('click', function () {

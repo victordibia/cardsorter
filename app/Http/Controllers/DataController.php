@@ -32,51 +32,55 @@ class DataController extends Controller {
 		return view ( 'pages.home' );
 	}
 	public function loaddata() {
-		$rowarray =  new stdClass();
+		$rowarray = new stdClass ();
 		$statearray = array ();
 		// $rowholder = $row_rsdata['itemid'] ;
 		$responses = response::where ( 'responsetype', '=', "train" )->where ( 'userid', '=', Auth::user ()->id )->get ();
-		$itemholder = $responses->first ()->itemid;
-		 
-		foreach ( $responses as $response ) {
-			//echo $response;
-			if ($itemholder == $response->itemid) {
-				$arr = array (
-						'id' =>$response->categoryid,
-						'state' => $response->responsestatus 
-				);
-				array_push ( $statearray, $arr );
-			} else {
-				// echo "<br/>======= " . $row_rsdata['itemid'] . "===============" ;
-				// array_push($arrbb, array( $rowholder => $arrb));
-				$rowarray->$itemholder = $statearray;
-				// ==============
-				$statearray = array ();
-				$arr = array (
-						'id' =>$response->categoryid,
-						'state' => $response->responsestatus 
-				);
-				array_push ( $statearray, $arr );
-				// echo $row_rsdata['constructid'];
-				$itemholder = $response->itemid;
+		if ($responses->count () > 0) {
+			
+			$itemholder = $responses->first ()->itemid;
+			
+			foreach ( $responses as $response ) {
+				// echo $response;
+				if ($itemholder == $response->itemid) {
+					$arr = array (
+							'id' => $response->categoryid,
+							'state' => $response->responsestatus 
+					);
+					array_push ( $statearray, $arr );
+				} else {
+					// echo "<br/>======= " . $row_rsdata['itemid'] . "===============" ;
+					// array_push($arrbb, array( $rowholder => $arrb));
+					$rowarray->$itemholder = $statearray;
+					// ==============
+					$statearray = array ();
+					$arr = array (
+							'id' => $response->categoryid,
+							'state' => $response->responsestatus 
+					);
+					array_push ( $statearray, $arr );
+					// echo $row_rsdata['constructid'];
+					$itemholder = $response->itemid;
+				}
 			}
+			$rowarray->$itemholder = $statearray;
+			echo json_encode ( $rowarray );
 		}
-		$rowarray-> $itemholder = $statearray ;
-		echo json_encode($rowarray);
+		;
 		return "";
 	}
 	public function test() {
-		$rowarray =  new stdClass();
+		$rowarray = new stdClass ();
 		$statearray = array ();
 		// $rowholder = $row_rsdata['itemid'] ;
 		$responses = response::where ( 'responsetype', '=', "train" )->where ( 'userid', '=', Auth::user ()->id )->get ();
 		$itemholder = $responses->first ()->itemid;
-		 
+		
 		foreach ( $responses as $response ) {
-			//echo $response;
+			// echo $response;
 			if ($itemholder == $response->itemid) {
 				$arr = array (
-						'id' =>$response->categoryid,
+						'id' => $response->categoryid,
 						'state' => $response->responsestatus 
 				);
 				array_push ( $statearray, $arr );
@@ -87,7 +91,7 @@ class DataController extends Controller {
 				// ==============
 				$statearray = array ();
 				$arr = array (
-						'id' =>$response->categoryid,
+						'id' => $response->categoryid,
 						'state' => $response->responsestatus 
 				);
 				array_push ( $statearray, $arr );
@@ -95,8 +99,8 @@ class DataController extends Controller {
 				$itemholder = $response->itemid;
 			}
 		}
-		$rowarray-> $itemholder = $statearray ;
-		echo json_encode($rowarray);
+		$rowarray->$itemholder = $statearray;
+		echo json_encode ( $rowarray );
 		return "";
 	}
 	public function savedata() {

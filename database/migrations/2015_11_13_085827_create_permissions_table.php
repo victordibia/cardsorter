@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemPermissionsTable extends Migration {
+class CreatePermissionsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,14 @@ class CreateItemPermissionsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('item_permissions', function(Blueprint $table)
+		Schema::create('permissions', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('userid');
-			$table->string('responsegroupid');
-			$table->integer('lower');   // giving permissions for a range of items this user is allowed to access.
-			$table->integer('upper');
+			$table->string('projectid');
+			$table->integer('read');   // 
+			$table->integer('write');
+			$table->integer('owner');  
 			$table->timestamps();
 		});
 	}
@@ -30,7 +31,7 @@ class CreateItemPermissionsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('item_permissions');
+		Schema::drop('permissions');
 	}
 
 }
