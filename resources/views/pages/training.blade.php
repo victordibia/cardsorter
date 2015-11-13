@@ -65,8 +65,8 @@
 	    ?>
             
            @foreach ($categories as $category)
-        <?php if ($groupname != $category->group ) { 
-            $groupname = $category->group ;
+        <?php if ($groupname != $category->codegroup ) { 
+            $groupname = $category->codegroup ;
             $colorindex =($colorindex + 1) % count($colors) ;
 	    }
         ?>
@@ -80,7 +80,7 @@
 						style="width: 100%; padding: 10px; border: 1px solid #ccc; margin: 0px;">
 						<input type="checkbox"
 						dbid="<?php echo  $category->id; ?>"
-						name="<?php echo $category->group; ?>"> <?php echo  $category->title ; ?>
+						name="<?php echo $category->codegroup; ?>"> <?php echo  $category->title ; ?>
 					</label>
 				</div>
 			</div>

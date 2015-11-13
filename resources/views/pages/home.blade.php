@@ -37,15 +37,13 @@
 					originates from the field of psychology. Though similar, this
 					process is fairly different from the cardsorting process used to
 					group and layout content for user interface research. To elaborate,</p>
-				<blockquote>
-					<small>Someone famous in Card sorting "involves [the] sorting [of]
-						a series of cards, each labeled with a piece of content or
-						functionality, into groups that make sense to users or
-						participants" (Mauer & Warfel, 2002, p.2). </small>
-				</blockquote>
-				Closed sorting is defined as "[a methodology] in which the groupings
+				 
+				<p>
+				<strong>  Closed sorting </strong>  is defined as "[a methodology] in which the groupings
 				are defined by the researcher and the subject is putting object
-				cards into the defined groups" (Deaton, 2002, p.4). Open sorting is
+				cards into the defined groups" (Deaton, 2002, p.4). 
+				</p>
+				<strong> Open sorting</strong>  is
 				defined as "[a methodology] in which subjects can determine their
 				own groupings by first sorting the cards and then labeling the
 				resulting piles" (Deaton, 2002, p.4). cardSORTER is being built to

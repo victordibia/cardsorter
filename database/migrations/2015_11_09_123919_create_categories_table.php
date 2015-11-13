@@ -16,10 +16,10 @@ class CreateCategoriesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title');
-			$table->string('code');
+			$table->string('code')->unique();
 			$table->integer('projectid');
 			$table->string('description');
-			$table->string('group')->unique();
+			$table->string('codegroup');
 			$table->timestamps();
 		});
 	}
