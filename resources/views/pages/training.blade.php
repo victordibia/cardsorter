@@ -9,6 +9,7 @@
 	<li class="active">Here</li>
 </ol>
 @endsection @section('content')
+<?php if ($categories->count() > 0) {;?>
 <div class="box">
 	<div class="box-header with-border"
 		style="padding: 10px 20px 10px 20px;">
@@ -35,9 +36,11 @@
 			<span class="sr-only">60% Complete (warning)</span>
 		</div>
 	</div>
-	<div class="box-body cardboxholder "> </div>
+	<div class="box-body cardboxholder "></div>
 
 </div>
+
+
 
 <div class="row cardbox" style="display: none;">
              <?php  $i = 1 ;  ?>
@@ -47,6 +50,21 @@
 			, dbid="<?php echo $traindata->id; ?>">       
               <?php echo $traindata->description ; ?>   
              </div>
+		<hr />
+		
+		<div>
+			<div class="loadtext codetags" style="background:gray; ">Tags </div> 
+			@foreach ($train_responses as  $train_response)  
+			<?php if ($train_response->itemid ==  $traindata->id) 			
+			{ 
+				global $categoryid ; $categoryid = $train_response->categoryid ;
+				$hold = $categories->filter(function($item) { global $categoryid ;	return $item->id == $categoryid; })->first();
+	         ?>
+			<div class="loadtext codetags ">{{$hold->title }}</div>
+			<?php }?>
+			@endforeach 
+		</div>
+
 	</div>
             <?php $i++ ;?>
                @endforeach 
@@ -58,37 +76,46 @@
 		<h3 class="box-title">Select Codes that Apply</h3>
 	</div>
 	<div class="box-body constructbox categorybox"> 
-        <?php   
-            $groupname = "" ;
-            $colorindex = 0 ;
-            $colors = array("#3c8dbc","#00c0ef","#00a65a","#f39c12","#f56954"," #d2d6de"," #0000FF","#7F00FF"," #FF0000") ;
-	    ?>
+        <?php
+								$groupname = "";
+								$colorindex = 0;
+								$colors = array (
+										"#3c8dbc",
+										"#00c0ef",
+										"#00a65a",
+										"#f39c12",
+										"#f56954",
+										" #d2d6de",
+										" #0000FF",
+										"#7F00FF",
+										" #FF0000" 
+								);
+								?>
             
            @foreach ($categories as $category)
-        <?php if ($groupname != $category->codegroup ) { 
-            $groupname = $category->codegroup ;
-            $colorindex =($colorindex + 1) % count($colors) ;
-	    }
-        ?>
+        <?php
+								
+if ($groupname != $category->codegroup) {
+									$groupname = $category->codegroup;
+									$colorindex = ($colorindex + 1) % count ( $colors );
+								}
+								?>
 				<div class="col-md-4" style="padding: 10px;">
-			<div class="codeboxb" style="border-bottom:3px solid <?php echo $colors[$colorindex] ;?>;" >
-				<div class="" style="height: 100%; margin: 0px;"
-					align="center">
-					<label class="category" data-placement="top"
-						data-toggle="tooltip"
+			<div class="codeboxb" style="border-bottom: 3px solid #ccc;">
+				<div class="" style="height: 100%; margin: 0px;" align="center">
+					<label class="category" data-placement="top" data-toggle="tooltip"
 						title="<?php echo  $category-> description ; ?>"
 						style="width: 100%; padding: 10px; border: 1px solid #ccc; margin: 0px;">
-						<input type="checkbox"
-						dbid="<?php echo  $category->id; ?>"
+						<input type="checkbox" dbid="<?php echo  $category->id; ?>"
 						name="<?php echo $category->codegroup; ?>"> <?php echo  $category->title ; ?>
 					</label>
 				</div>
 			</div>
-		</div>       
-          @endforeach 
-              
-              
-              </div>
+		</div>
+		@endforeach
+
+
+	</div>
 	<!-- /.box-body -->
 
 </div>
@@ -120,10 +147,26 @@
 	<i class="fa fa-fw fa-hourglass"></i> Loading saved responses from
 	database ..
 </div>
-
-
+<div id="resultmodal" class="modal fade bs-example-modal-lg"
+	tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	<div class="modal-dialog modal-lg">
+		<div class="box">
+			<div class="box-header with-border">
+				<i class="fa fa-area-chart"></i>
+				<h3 class="box-title">
+					<strong>Results</strong>
+				</h3>
+			</div>
+			<div class="box-body">REsult</div>
+		</div>
+	</div>
+</div>
+<?php } else {?>
+<div class="box">
+			<div class="box-body"> No current projects.</div>
+		</div>
+<?php } ;?>
 
 @endsection @section('pagescripts')
 <script src="{{ asset('js/training.js') }}"></script>
-@endsection
-@endsection
+@endsection @endsection

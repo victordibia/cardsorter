@@ -20,18 +20,18 @@ $(document).ready(function() {
 
 	//BInd left and right arrow keys to prev and next button
 	$(document).keydown(function(e) {
-		switch(e.which) {
-		case 37: // left
-			$('.previousbutton').first().click();
-			break;
-
-		case 39: // right
-			$('.nextbutton').first().click();
-			break;
-
-		default: return; // exit this handler for other keys
+		if (!($("#resultmodal").data('bs.modal') || {}).isShown ) {
+			switch(e.which) {
+			case 37: // left
+				$('.previousbutton').first().click();
+				break;
+			case 39: // right
+				$('.nextbutton').first().click();
+				break;
+			default: return; // exit this handler for other keys
+			}
+			e.preventDefault(); // prevent the default action (scroll / move caret)
 		}
-		e.preventDefault(); // prevent the default action (scroll / move caret)
 	});
 
 
@@ -100,8 +100,12 @@ $(document).ready(function() {
 			//currentindex = nextindex ;
 			dbid = $('.cardbox').find('#'+nextindex).attr("dbid") ;
 			loadState(nextindex, dbid) ;
-			UpdateProgressBar(nextindex)
-
+			UpdateProgressBar(nextindex);
+		}else {
+			$('#resultmodal').modal({
+				keyboard: false,
+				show: true
+			});
 		}
 	}
 
@@ -159,6 +163,8 @@ $(document).ready(function() {
 			}
 		}
 	}
+
+
 
 
 });

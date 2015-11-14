@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder {
 		DB::table('users')->insert(array(
 		array('name'=>'Victor Dibia','email'=>'victor.dibia@gmail.com','password'=> bcrypt('victor')),
 		array('name'=>'Demo One Account','email'=>'demo@gmail.com','password'=> bcrypt('demodemo')),
+		array('name'=>'Dimple Thadani','email'=>'dimple.r.thadani@gmail.com','password'=> bcrypt('professordimple')),
 		));  
 		  
 		
@@ -29,7 +30,7 @@ class DatabaseSeeder extends Seeder {
 		//insert some dummy records
 		DB::table('categories')->insert(array(
 		array('title'=>'Information gathering', 'code'=> 'IGG','codegroup'=> 'IG', 'description'=> 'What are the supported tools, languages, simulators etc?','projectid'=> 1 ),
-		array('title'=>'Idea Verification (Validity)', 'code'=> 'IVV','codegroup'=> 'IV', 'description'=> 'Atemppt to verify ideas by getting feedback from both moderators and fellow participants','projectid'=> 1),
+		array('title'=>'Idea Verification (Validity)', 'code'=> 'IVV','codegroup'=> 'IV', 'description'=> 'Attempts to verify ideas by getting feedback from both moderators and fellow participants','projectid'=> 1),
 		array('title'=>'Idea Verification (Eligibility)', 'code'=> 'IVE','codegroup'=> 'IV', 'description'=> 'Evaluating eligibility of ideas','projectid'=> 1),
 		array('title'=>'Rule Clarification (Deliverable)', 'code'=> 'RCD','codegroup'=> 'RC', 'description'=> 'Clarifying rules on contest deliverable','projectid'=> 1),
 		array('title'=>'Rule Clarification (Submission)', 'code'=> 'RCS','codegroup'=> 'RC', 'description'=> 'Clarifying rules on contest submission process','projectid'=> 1),
@@ -48,10 +49,10 @@ class DatabaseSeeder extends Seeder {
 		DB::table('train_items')->delete();
 		//insert some dummy records
 		DB::table('train_items')->insert(array(
-		array('title'=>'Information gathering',  'description'=> 'Where can I download the Tizen SDK?'),
-		array('title'=>'Information gathering',  'description'=> 'I am 14 and italian, am I eligible for the contest?'),
+		array('title'=>'Information gathering',  'description'=> 'Hey @Tommy, thats for your help with the app certification. Where can I download the Tizen SDK?'),
+		array('title'=>'Information gathering',  'description'=> 'I am 14 and Italian, am I eligible for the contest?'),
 		array('title'=>'Information gathering',  'description'=> 'I am dissapointed with the results that have been announced'),
-		array('title'=>'Information gathering',  'description'=> 'Excellnet suggest! Thanks, it worked really well for me!'),
+		array('title'=>'Information gathering',  'description'=> 'Excellent suggestion! Thanks, it worked really well for me!'),
 		array('title'=>'Information gathering',  'description'=> 'I have an idea about making apps for runners, would this be eligible. Also, can I use external hardware?'),
 		
 		));
@@ -72,7 +73,20 @@ class DatabaseSeeder extends Seeder {
 		//insert some dummy records
 		DB::table('permissions')->insert(array(
 		array('userid'=>'1', 'projectid' => 1, 'writepermission'=> 1), 
-		array('userid'=>'1', 'projectid' => 2, 'writepermission'=> 1),
+		array('userid'=>'2', 'projectid' => 1, 'writepermission'=> 1),
+		));
+		
+		// Seed Responses table
+		DB::table('train_responses')->delete();
+		//insert some dummy records
+		DB::table('train_responses')->insert(array(
+		array('itemid'=>'1', 'categoryid' => 7, 'responsestatus'=> 1),
+		array('itemid'=>'1', 'categoryid' => 8, 'responsestatus'=> 1),
+		array('itemid'=>'2', 'categoryid' => 6, 'responsestatus'=> 1 ),
+		array('itemid'=>'2', 'categoryid' => 7, 'responsestatus'=> 1 ),
+		array('itemid'=>'3', 'categoryid' => 11, 'responsestatus'=> 1),
+		array('itemid'=>'4', 'categoryid' => 8, 'responsestatus'=> 1),
+		array('itemid'=>'5', 'categoryid' => 3, 'responsestatus'=> 1),
 		));
 	}
 

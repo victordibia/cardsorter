@@ -13,7 +13,9 @@
 .codeboxb {
 	
 }
-
+.codetags {
+	display: inline-block ;
+}
 .codeboxb:hover {
 	background: #00A65A;
 	color: #fff;
@@ -22,7 +24,7 @@
 .loadtext {
 	color: #FFF;
 	padding: 10px 10px 10px 10px;
-	background: #00a65a;
+	background: #00a65a;  
 }
 
 .titletext {
