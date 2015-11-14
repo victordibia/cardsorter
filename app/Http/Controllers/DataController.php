@@ -34,8 +34,9 @@ class DataController extends Controller {
 	public function loaddata() {
 		$rowarray = new stdClass ();
 		$statearray = array ();
+		$responsetype = $_POST ['responsetype'];
 		// $rowholder = $row_rsdata['itemid'] ;
-		$responses = response::where ( 'responsetype', '=', "train" )->where ( 'userid', '=', Auth::user ()->id )->get ();
+		$responses = response::where ( 'responsetype', '=', $responsetype )->where ( 'userid', '=', Auth::user ()->id )->get ();
 		if ($responses->count () > 0) {
 			
 			$itemholder = $responses->first ()->itemid;

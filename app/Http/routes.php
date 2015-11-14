@@ -21,7 +21,7 @@ Route::get('training', 'PagesController@training');
 Route::get('tasks', 'PagesController@tasks');
 
 //Handle Data Requests
-Route::get('loaddata', 'DataController@loaddata');
+//Route::get('loaddata', 'DataController@loaddata');
 Route::post('loaddata', 'DataController@loaddata');
 Route::post('savedata', 'DataController@savedata');
 Route::get('test', 'DataController@test');

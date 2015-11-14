@@ -19,7 +19,7 @@ class CreateResponsesTable extends Migration {
 			$table->integer('itemid');
 			$table->integer('categoryid');
 			$table->integer('responsestatus');
-			$table->integer('responsetype');
+			$table->string('responsetype');
 			$table->timestamps();
 		});
 	}

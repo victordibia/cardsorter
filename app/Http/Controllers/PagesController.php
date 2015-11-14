@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\train_item;
+use App\item;
 use App\project;
 use Auth;
 use App\permission;
@@ -73,6 +74,18 @@ class PagesController extends Controller {
 		return view ( 'pages.training')->with($data);
 	}
 	public function tasks() {
-		return view ( 'pages.tasks' );
+		$items = item::all();
+		$train_responses = train_response::all();
+		$categories = permission::select('projects.title as projecttitle', 'categories.*')
+		->where('permissions.userid','=',Auth::user ()->id)
+		->join('projects', 'permissions.projectid', '=', 'projects.id')
+		->orderBy('projects.created_at', 'desc')
+		->join('categories', 'categories.projectid', '=', 'projects.id')
+		->orderBy('categories.codegroup', 'desc')
+		->orderBy('projecttitle', 'desc')
+		->get();
+		
+		$data = array('categories' =>  $categories, 'items' =>  $items, 'train_responses' => $train_responses);
+		return view ( 'pages.tasks' )->with($data);
 	}
 }

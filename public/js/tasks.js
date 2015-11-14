@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	$.ajax({
 		url: "loaddata",
-		data: {responsetype : "train"},
+		data: {responsetype : "maintask"},
 		method: "POST",
 		context: document.body
 	}).done(function(data) {
@@ -134,7 +134,7 @@ $(document).ready(function() {
 		$.ajax({
 			url: "savedata",
 			method: "POST",
-			data: { responsedata : JSON.stringify(data) , responsetype : "train"},
+			data: { responsedata : JSON.stringify(data) , responsetype : "maintask"},
 			context: document.body
 		}).done(function(data) {
 			$("#response").html("Response for <span class='cardresponse'> Card " + currentindex + " </span> has been saved to database." );

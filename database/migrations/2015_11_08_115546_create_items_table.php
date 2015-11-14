@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration {
 			$table->string('title');
 			$table->longText('description');
 			$table->integer('projectid');
+			$table->integer('externalid');
 			$table->integer('resonpsestatus');
 			$table->timestamps();
 		});

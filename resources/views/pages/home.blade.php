@@ -31,7 +31,6 @@
 			</div>
 			<!-- /.box-header -->
 			<div class="box-body">
-
 				<p>cardSORTER is an online tool in beta stage development to
 					simplify the research process of CARD SORTING that pretty much
 					originates from the field of psychology. Though similar, this

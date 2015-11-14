@@ -74,6 +74,7 @@ class DatabaseSeeder extends Seeder {
 		DB::table('permissions')->insert(array(
 		array('userid'=>'1', 'projectid' => 1, 'writepermission'=> 1), 
 		array('userid'=>'2', 'projectid' => 1, 'writepermission'=> 1),
+		array('userid'=>'3', 'projectid' => 1, 'writepermission'=> 1),
 		));
 		
 		// Seed Responses table

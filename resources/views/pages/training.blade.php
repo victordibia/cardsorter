@@ -154,10 +154,17 @@ if ($groupname != $category->codegroup) {
 			<div class="box-header with-border">
 				<i class="fa fa-area-chart"></i>
 				<h3 class="box-title">
-					<strong>Results</strong>
+					<strong>Training Summary </strong>
 				</h3>
 			</div>
-			<div class="box-body">REsult</div>
+			<div class="box-body"> 
+			Congratulations on going through the training session. The tags below each text show you the correct category(ies) to which each text belong. Proceed to the main task to start coding!.
+			</div>
+			
+			<div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-success btn-flat" data-dismiss="modal">Close</button>
+         
+      </div>
 		</div>
 	</div>
 </div>
