@@ -39,26 +39,18 @@ Features to be implemented
 Change Log
 ---------
 
-- Version 2.0 ... A complete rewrite of the code base using Laravel framework. (was formerly plain old php).
+- Version 0.3 ... Rewrite using Nodejs.
+- Version 0.2 ... A complete rewrite of the code base using Laravel framework. (was formerly plain old php).
 
-Developed by Victor D.
-hello@denvycom.com
-http://denvycom.com/blog
-GIT https://github.com/chuvidi2003/cardsorter
 
 
 Tools
 ---------
 cardSORTER is being developed using the following tools
 
-**AdminLTE template**
+- [AdminLTE template : ] (https://almsaeedstudio.com/preview)
+- Icons :
 
-https://almsaeedstudio.com/preview
 
-**Laravel PHP Framework**
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)

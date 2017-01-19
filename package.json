@@ -1,0 +1,27 @@
+{
+  "name": "cardsorter",
+  "version": "1.0.0",
+  "description": "Card Sorting Tool for Social Sciences Research ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victordibia/cardsorter.git"
+  },
+  "keywords": [
+    "Cardsort",
+    "cardsorter",
+    "cardsorting",
+    "open",
+    "source",
+    "nodejs"
+  ],
+  "author": "Victor Dibia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victordibia/cardsorter/issues"
+  },
+  "homepage": "https://github.com/victordibia/cardsorter#readme"
+}
