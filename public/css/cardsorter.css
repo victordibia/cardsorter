@@ -1,0 +1,78 @@
+.trainthumb {
+
+  max-width:100%;
+max-height:100%;
+}
+.trainboxicon {
+  display: block;
+  float: left;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 90px;
+}
+.thumb-title {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1;
+}
+.vidbox {
+  cursor: pointer;
+}
+.videotitle {
+  font-weight: bold;
+}
+.taglabel {
+  color: #fff ;
+  font-size: 15px ;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px;
+  line-height: 43px ;
+  border-left: solid 4px #fff ;
+  display: inline-block;
+}
+.solidborder {
+  border: 2px ;
+}
+
+.watsonsverdict{
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+  line-height: 40px ;
+  font-size: 15px ;
+  margin-bottom: 10px ;
+  border-left: solid 4px #fff ;
+}
+.bold{
+  font-weight: bold;
+}
+.tagframe {
+  color: #0C7024 ;
+  font-size: 15px ;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px;
+  line-height: 40px ;
+  margin-right: 10px; 
+  margin-top: 10px ;
+  border: 1px solid #fff ;
+  display: inline-block;
+  background-color: #fff;
+}
+.annotateframe {
+    display: inline-block;
+}
+.tagbox {
+  margin-bottom: 10px;
+}
+.redcolor {
+  color: red ;
+}
+.recordcamera {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.annotatebox{
+  margin-top: 10px;
+}
