@@ -22,10 +22,7 @@ I considered creating cardSORTER because I could not find any free tool that all
 - Report Generation and Data Export
 - Cognitive Service Integration (think comparing machine based coding with )
 
-License
--------
 
-cardSORTER is an open source project by [Victor Dibia, Denvycom](https://victordibia.com) that is licensed under [MIT](http://opensource.org/licenses/MIT). I reserve the right to change the license of future releases.
 
 Todo List
 ---------
@@ -52,5 +49,7 @@ cardSORTER is being developed using the following tools
 - Icons :
 
 
-
+License
+-------
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+cardSORTER is an open source project by [Victor Dibia](https://victordibia.com) that is licensed under [MIT](http://opensource.org/licenses/MIT). I reserve the right to change the license of future releases.
