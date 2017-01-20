@@ -1,0 +1,84 @@
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			New Recording <small> Create a new recording session </small>
+		</h1>
+	</section>
+	<!-- Main content -->
+	<section class="content">
+
+		<div class="callout callout-success" style="display:none;" id="updatemessage"> <p>This is a green callout.</p>
+		</div>
+
+		<!-- Info boxes -->
+
+		<!-- /.row -->
+		<!-- Your Page Content Here -->
+		<!-- COLOR PALETTE -->
+		<div class="box">
+
+
+			<div class="box-body">
+				<a class="btn btn-app recordcamera" id="1" status = "off" >
+					<i class="fa fa-circle " ></i> Camera 1
+				</a>
+				<a class="btn btn-app recordcamera " id="2" status = "off" >
+					<i class="fa fa-circle" ></i> Camera 2
+				</a>
+				<a class="btn btn-app recordcamera" id="3" status = "off" >
+					<i class="fa fa-circle" ></i> Camera 3
+				</a>
+				<a class="btn btn-app recordcamera" id="4" status = "off" >
+					<i class="fa fa-circle" ></i> Camera 4
+				</a>
+			</div><!-- /.box-body -->
+
+		</div>
+
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">Recent Recordings </h3>
+			</div><!-- /.box-header -->
+			<div class="box-body">
+				<div class="row" id="videorow">
+				</div>
+
+			</div>
+		</div>
+
+<div class="modal-success modal fade bs-example-modal-lg" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title videotitle" id="videotitle">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<div class="tagbox">
+					<span class="taglabel  bg-yellow"><i class="fa fa-flag-o"></i></span>
+
+				</div>
+				<div class="verdictbox"></div>
+				<div class="healthybars">
+					<p style="font-weight:bold"></p>
+
+				</div>
+				<div id="videoDiv">
+					<video id="videoplayer" src="/videos/8xFwvE_Khxo.mp4" width="100%" controls>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+		</div>
+
+	</section>
+	<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

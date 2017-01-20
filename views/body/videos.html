@@ -1,0 +1,64 @@
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			Videos <small> Video resources for Food Exploration Module </small>
+		</h1>
+
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="callout callout-success" style="display:none;" id="updatemessage"> <p>This is a green callout.</p>
+		</div>
+
+		<!-- COLOR PALETTE -->
+
+		<div class="row" id="videorow">
+		</div>
+
+		<div class="modal-success modal fade bs-example-modal-lg" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title videotitle" id="videotitle">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						<div class="tagbox">
+							  <span class="taglabel  bg-yellow"><i class="fa fa-flag-o"></i></span>
+
+						</div>
+						<div class="verdictbox"></div>
+						<div class="healthybars">
+							<p style="font-weight:bold">Healthiness bar [Vision Recognition]. WHAT WATSON SEES</p>
+							<div class="progress progress-xs">
+                    <div id="healthyfood" class="progress-bar progress-bar-yellow active progress-bar-striped " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
+									<div class="progress progress-xs">
+		                    <div id="healthyfoodbowl" class="progress-bar progress-bar-yellow " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+		                      <span class="sr-only">60% Complete (warning)</span>
+		                    </div>
+		                  </div>
+						</div>
+						<div id="videoDiv">
+     <video id="videoplayer" src="/videos/8xFwvE_Khxo.mp4" width="100%" controls>
+    </div>
+					</div>
+					<div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+                  </div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

@@ -1,0 +1,80 @@
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			Annotate Video <small> Add notes to portions of a video </small>
+		</h1>
+	</section>
+	<!-- Main content -->
+	<section class="content">
+
+		<div class="callout callout-success" style=" " id="updatemessage"> <p>Select a video to annotate</p>
+		</div>
+
+		<!-- Info boxes -->
+
+		<!-- /.row -->
+		<!-- Your Page Content Here -->
+		<!-- COLOR PALETTE -->
+
+
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">Recent Recordings </h3>
+			</div><!-- /.box-header -->
+			<div class="box-body">
+				<div class="row" id="videorow">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="modal-success modal fade bs-example-modal-lg" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title videotitle" id="videotitle">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						<div class="tagbox">
+							<span class="taglabel  bg-yellow" id="timebox"> </i> </span>
+							<div class="annotateframe" id="annotateframe">
+
+							</div>
+						</div>
+
+						<div class="verdictbox"></div>
+						<div class="healthybars">
+							<div class="progress progress-xs">
+										<div id="vidprogress" class="progress-bar progress-bar-yellow " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+											<span class="sr-only">60% Complete (warning)</span>
+										</div>
+									</div>
+
+
+						</div>
+						<div id="videoDiv">
+							<video id="videoplayer" src="/videos/8xFwvE_Khxo.mp4" width="100%" controls>
+							</div>
+							<div class="" id="annotatebox">
+								<div class="input-group annotatebox" >
+								<span class="input-group-addon input-lg bold" id="annotationtime">Add annotation</span>
+								<input type="text" class="form-control input-lg" placeholder="Add annotation" id="annotateinputbox">
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-outline pull-left" data-dismiss="modal" id="saveclose">Close</button>
+							<button type="button" class="btn btn-outline" data-dismiss="modal">Save and Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->

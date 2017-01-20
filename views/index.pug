@@ -1,0 +1,14 @@
+//- index.jade
+doctype html
+html
+  head
+    title cardSORTER | Dashboard
+  body.hold-transition.skin-green.layout-top-nav
+    div.wrapper
+      include ./body/header-landing.html
+      include ./body/index.html
+      include ./body/footer.html
+      include ./body/controlsidebar.html
+    script(src='plugins/flot/jquery.flot.min.js')
+    script(src='plugins/flot/jquery.flot.resize.min.js')
+    script(src='js/index.js')
