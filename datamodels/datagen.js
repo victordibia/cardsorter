@@ -5,9 +5,10 @@
 
 var usermodel = require('./user');
 
-createUser();
+//createUser(); 
 
 function createUser() {
+    usermodel.deleteAllUsers();
     var newuser = new usermodel.users({
         firstname: "Admin",
         email: "admin@admin.com",

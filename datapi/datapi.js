@@ -9,8 +9,8 @@
 
 var express = require('express');
 var router = express.Router();
-var usermodel = require('./user');
-//var datagen = require("./datagen")
+var usermodel = require('../datamodels/user');
+var datagen = require("../datamodels/datagen")
 
 // middleware specific to this router
 router.use(function timeLog(req, res, next) {

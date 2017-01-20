@@ -9,7 +9,6 @@
  * the dataapi and for the interface visualization
  */
 
-
 var express = require("express")
 var config = require('./config.js')
 var path = require("path")
@@ -18,7 +17,8 @@ var session = require('express-session');
 var http = require('http');
 var datapi = require('./datapi/datapi');
 var routes = require('./routes/index');
-
+var passport = require('passport');
+var flash = require('connect-flash');
 
 server = http.createServer(app).listen(config.portnumber, function() {
     var addr = server.address();
@@ -32,10 +32,27 @@ app.use(bodyParser.urlencoded({
 }))
 
 // Express Session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
 
+// Passport init
+app.use(passport.initialize());
+app.use(passport.session());
 
+// Connect Flash
+app.use(flash());
 
-
+// Global Vars
+app.use(function(req, res, next) {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    res.locals.user = req.user || null;
+    next();
+});
 
 
 // parse application/json

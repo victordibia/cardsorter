@@ -2,26 +2,12 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var usermodel = require('../datapi/user');
-var flash = require('connect-flash');
+var usermodel = require('../datamodels/user');
+//var flash = require('connect-flash');
 var session = require('express-session');
 
-router.use(session({
-    secret: 'secret',
-    saveUninitialized: true,
-    resave: true
-}));
 
-// Connect Flash
-router.use(flash());
-// Global Vars
-router.use(function(req, res, next) {
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
-    res.locals.error = req.flash('error');
-    res.locals.user = req.user || null;
-    next();
-});
+
 
 // Get Homepage
 // //Handles Every other page/url request
@@ -29,21 +15,26 @@ router.get("/", function(req, res) {
     res.render('index', {});
 });
 
-router.get('/constructs', ensureAuthenticated, function(req, res) {
-    res.render('index');
+router.get("/login", function(req, res) {
+    res.render('login', {});
+});
+
+router.get('/projects', ensureAuthenticated, function(req, res) {
+    res.render('projects');
 });
 
 // Setup login strategy using passport
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+
 router.use(passport.initialize());
 router.use(passport.session());
 
 
 router.post('/login',
     passport.authenticate('local', {
-        successRedirect: '/',
-        failureRedirect: '/loginfail',
+        successRedirect: '/projects',
+        failureRedirect: '/',
         failureFlash: true
     })
 );
@@ -58,7 +49,7 @@ passport.use(new LocalStrategy({
         usermodel.users.findOne({
             username: username
         }, function(err, user) {
-            console.log(user, username, password)
+
             if (err) {
                 return done(err);
             }
@@ -82,7 +73,7 @@ passport.use(new LocalStrategy({
 ));
 
 passport.serializeUser(function(user, done) {
-    done(null, user.id);
+    done(null, user._id);
 });
 
 passport.deserializeUser(function(id, done) {
@@ -95,8 +86,9 @@ function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     } else {
-        //req.flash('error_msg','You are not logged in');
-        res.redirect('/users/login');
+        //req.flash('error_msg', 'You are not logged in');
+        console.log("you are not logged in")
+        res.redirect('/');
     }
 }
 
