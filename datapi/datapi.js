@@ -9,20 +9,21 @@
 
 var express = require('express');
 var router = express.Router();
-var datamodel = require ('./datamodel');
+var usermodel = require('./user');
+//var datagen = require("./datagen")
 
 // middleware specific to this router
 router.use(function timeLog(req, res, next) {
-  //console.log('Time: ', Date.now());
-  next();
+    //console.log('Time: ', Date.now());
+    next();
 });
 
 var bodyParser = require('body-parser');
 router.use(bodyParser.json());
 
-router.get("/constructs/all/", function(req, res){
-  res.json("videodata");
-}) ;
+router.get("/constructs/all/", function(req, res) {
+    res.json("videodata");
+});
 
 
 module.exports = router;

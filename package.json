@@ -25,8 +25,13 @@
   },
   "homepage": "https://github.com/victordibia/cardsorter#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.0",
     "body-parser": "^1.16.0",
+    "connect-flash": "^0.1.1",
     "express": "^4.14.0",
-    "mongoose": "^4.7.7"
+    "express-session": "^1.14.2",
+    "mongoose": "^4.7.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   }
 }

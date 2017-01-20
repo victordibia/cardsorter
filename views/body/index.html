@@ -72,8 +72,8 @@
 						<div class="modal-body">
 							<div class="tagbox">
 
-								<form action="" method="POST" name="loginform" role="form" action="http://cardsorter.denvycom.com/auth/login">
-									<input type="hidden" name="_token" value="gQoiZWrb3cNlgCLNcraV3Qp1iwczhYu1DAbzbwOB">
+								<form action="/login" method="POST" name="loginform" role="form">
+									<input type="hidden" name="_token" value="">
 									<div class="form-group has-feedback">
 										<input name="email" type="email" class="form-control" placeholder="email address"> <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 									</div>
@@ -81,8 +81,11 @@
 										<input name="password" type="password" class="form-control" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 									</div>
 									<div class="row">
-
+										<div class="col-xs-4">
+											<button type="submit" class="btn btn-primary btn-success btn-block btn-flat">Sign In</button>
+										</div>
 									</div>
+
 								</form>
 
 

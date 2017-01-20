@@ -13,9 +13,11 @@
 var express = require("express")
 var config = require('./config.js')
 var path = require("path")
-var app = config.express;
+var app = express();
+var session = require('express-session');
 var http = require('http');
 var datapi = require('./datapi/datapi');
+var routes = require('./routes/index');
 
 
 server = http.createServer(app).listen(config.portnumber, function() {
@@ -29,17 +31,19 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 
+// Express Session
+
+
+
+
+
+
 // parse application/json
 app.use(bodyParser.json());
 
 app.set('view engine', 'pug');
 app.use(express.static('public'));
 
-
+app.use('/', routes);
 //Handles all data calls etc
 app.use('/data', datapi);
-
-//Handles Every other page/url request
-app.get("/", function(req, res) {
-    res.render('index', {});
-});
