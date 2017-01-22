@@ -38,6 +38,6 @@ cardSORTER is being developed using the following tools
 
 License
 -------
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 cardSORTER is an open source project by [Victor Dibia](https://victordibia.com) that is licensed under [MIT](http://opensource.org/licenses/MIT). I reserve the right to change the license of future releases.
