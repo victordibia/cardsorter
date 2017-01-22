@@ -40,53 +40,54 @@ header.main-header
             ul.nav.navbar-nav
                 // Messages: style can be found in dropdown.less
                 // Notifications Menu
-                li.dropdown.notifications-menu
-                    // Menu toggle button
-                    a.dropdown-toggle(href='#', data-toggle='dropdown')
-                        i.fa.fa-bell-o
-                        span.label.label-warning
-                    ul.dropdown-menu
-                        li.header 2 notifications
-                        li
-                            // Inner Menu: contains the notifications
-                            ul.menu
-                                li
-                                    // start notification
-                                    a(href='#')
-                                        i.fa.fa-users.text-aqua
-                                        |  New charts available
-                                // end notification
-                        li.footer
-                            a(href='#') View all
-                // User Account Menu
-                li.dropdown.user.user-menu
-                    // Menu Toggle Button
-                    a.dropdown-toggle(href='#', data-toggle='dropdown')
-                        // The user image in the navbar
-                        img.user-image(src='/img/user2-160x160.jpg', alt='User Image')
-                        // hidden-xs hides the username on small devices so only the image appears.
-                        span#username.hidden-xs  Guest
-                    ul.dropdown-menu
-                        // The user image in the menu
-                        li.user-header
-                            img(src='/img/user2-160x160.jpg', class='img-circle', alt='User Image')
-                            p
-                                | Moderator
-                                small Online Since 12:00
-                        // Menu Body
-                        li.user-body
-                            .col-xs-4.text-center
-                                a(href='#') Followers
-                            .col-xs-4.text-center
-                                a(href='#') Remote Users
-                            .col-xs-4.text-center
-                                a(href='#') Devices
-                        // Menu Footer
-                        li.user-footer
-                            .pull-left
-                                a.btn.btn-default.btn-flat(href='#') Profile
-                            .pull-right
-                                a.btn.btn-default.btn-flat(href='#') Sign out
+                if user.authenticated
+                    li.dropdown.notifications-menu
+                        // Menu toggle button
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            i.fa.fa-bell-o
+                            span.label.label-warning
+                        ul.dropdown-menu
+                            li.header 2 notifications
+                            li
+                                // Inner Menu: contains the notifications
+                                ul.menu
+                                    li
+                                        // start notification
+                                        a(href='#')
+                                            i.fa.fa-users.text-aqua
+                                            |  New charts available
+                                    // end notification
+                            li.footer
+                                a(href='#') View all
+                    // User Account Menu
+                    li.dropdown.user.user-menu
+                        // Menu Toggle Button
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            // The user image in the navbar
+                            img.user-image(src='/img/user2-160x160.jpg', alt='User Image')
+                            // hidden-xs hides the username on small devices so only the image appears.
+                            span#username.hidden-xs= user.name
+                        ul.dropdown-menu
+                            // The user image in the menu
+                            li.user-header
+                                img(src='/img/user2-160x160.jpg', class='img-circle', alt='User Image')
+                                p
+                                    | Moderator
+                                    small Online Since 12:00
+                            // Menu Body
+                            li.user-body
+                                .col-xs-4.text-center
+                                    a(href='#') Followers
+                                .col-xs-4.text-center
+                                    a(href='#') Remote Users
+                                .col-xs-4.text-center
+                                    a(href='#') Devices
+                            // Menu Footer
+                            li.user-footer
+                                .pull-left
+                                    a.btn.btn-default.btn-flat(href='#') Profile
+                                .pull-right
+                                    a.btn.btn-default.btn-flat(href='/logout') Sign out
                 // Control Sidebar Toggle Button
                 li
                     a(href='#', data-toggle='control-sidebar')

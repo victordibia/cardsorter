@@ -13,8 +13,13 @@ var session = require('express-session');
 // //Handles Every other page/url request
 router.get("/", function(req, res) {
     res.render('index', {
-        title: "bingoo is big girl"
+        title: "bingoo is big girl",
+        user: {
+            name: "Graziado",
+            authenticated: req.isAuthenticated()
+        }
     });
+    console.log("authenticated .. " + req.isAuthenticated());
 });
 
 router.get("/login", function(req, res) {
@@ -22,7 +27,14 @@ router.get("/login", function(req, res) {
 });
 
 router.get('/projects', ensureAuthenticated, function(req, res) {
-    res.render('projects');
+    res.render('projects', {
+        title: "bingoo is big girl",
+        user: {
+            name: "Graziado",
+            authenticated: req.isAuthenticated()
+        }
+    });
+    console.log("authenticated .. " + req.isAuthenticated());
 });
 
 // Setup login strategy using passport
@@ -73,6 +85,11 @@ passport.use(new LocalStrategy({
         });
     }
 ));
+
+router.get('/logout', function(req, res) {
+    req.logout();
+    res.redirect('/');
+});
 
 passport.serializeUser(function(user, done) {
     done(null, user._id);
