@@ -1,13 +1,13 @@
 //- index.jade
 doctype html
 html
-  head
-    title CEL Record | Record
-  body.skin-green.layout-boxed.sidebar-mini
-    div.wrapper
-      include ./body/header.html
-      include ./body/sidebar.html
-      include ./body/projects.html
-      include ./body/footer.html
-      include ./body/controlsidebar.html
-    script(src='js/projects.js')
+    head
+        title CEL Record | Record
+    body.skin-green.layout-boxed.sidebar-mini
+        div.wrapper
+            include header.pug
+            include ./body/sidebar.html
+            include ./body/projects.html
+            include ./body/footer.html
+            include ./body/controlsidebar.html
+        script(src='js/projects.js')

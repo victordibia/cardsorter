@@ -6,30 +6,18 @@ cardSORTER is a web based tool being developed to implement the cardsorting meth
 
 - **Construct Cardsorting** : Sorting items into multiple constructs to verify initial content validity.
 - **Qualitative Text Coding** : Assigning qualitative text data (e.g interview text, forum text data, other things) into defined category.
+- Other features ..
 
 **Update** The initial version of the app was done in PHP (old files [here](/old)), but I am currently rewriting the app to work with nodejs. Some rationale behind this [here.](https://github.com/victordibia/cardsorter/issues/2)
 
 
 ![enter image description here](/public/img/screen.jpg)
 
-Why create cardSORTER
--------
-I considered creating cardSORTER because I could not find any free tool that allowed me to easily code a large number of items and also allow for multiple coders. Other things cardSORTER has going (or will have) includes it being ..
-- Free
-- Easy to Use
-- Web-based (multi-user support)
-- Report Generation and Data Export
-- Cognitive Service Integration (think comparing machine based coding with )
 
 
-
-Todo List
+Current Status
 ---------
-
-Features to be implemented
-
-- Allow creation of Categories/Construct
-- Report/Charts
+A lot of work needs to be done to get some inital nodejs features working.
 
 
 Change Log

@@ -1,109 +1,124 @@
-<!-- Full Width Column -->
+<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-	<div class="container">
-		<!-- Content Header (Page header) -->
-		<section class="content-header">
-			<h1>
+	<!-- Content Header (Page header) -->
 
-					<br/>
-					</h1>
+	<section class="content">
 
-		</section>
+		<div class="callout callout-success" style="display:none;" id="updatemessage">
+			<p>This is a green callout.</p>
+		</div>
 
-		<!-- Main content -->
-		<section class="content">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="box box-solid">
+		<!-- Info boxes -->
 
-						<!-- /.box-header -->
-						<div class="box-body">
-							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-								<ol class="carousel-indicators">
-									<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-									<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-									<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="item active">
-										<div class="greencarousel">
-											<div class="carouseltext" style="padding-top: 140px;">Hi There!</div>
-											<div class="carouseltext">I'm Creating Something Sciency</div>
-											<div class="carouseltext" style="padding-top: 0px;"> <i class="fa fa-flask"></i> </div>
-										</div>
-										<div class="carousel-caption"></div>
-									</div>
-									<div class="item ">
-										<div class="greencarousel">
-											<div class="carouseltext" style="padding-top: 150px;">Its a tool ..</div>
-											<div class="carouseltext">For Social Science Research!</div>
-										</div>
-										<div class="carousel-caption"></div>
-									</div>
-									<div class="item">
-										<div class="greencarousel">
-											<div class="carouseltext" style="padding-top: 150px;">Its!
-											</div>
-											<div class="carouseltext">cardSORTER!</div>
-										</div>
-										<div class="carousel-caption"></div>
-									</div>
-								</div>
-								<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="fa fa-angle-left"></span>
-								</a>
-								<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="fa fa-angle-right"></span>
-								</a>
+		<!-- /.row -->
+		<!-- Your Page Content Here -->
+		<!-- COLOR PALETTE -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box box-success">
+					<div class="box-header with-border">
+						<h3 class="box-title">Login </h3>
+						<span class="label label-success pull-right"><i class="fa fa-lock"></i></span>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body">
+						<p>All files including the compiled CSS. Download this version if you plan on customizing the template. <b>Requires a LESS compiler.</b></p>
+						<form action="/login" method="POST" name="loginform" role="form">
+							<input type="hidden" name="_token" value="">
+							<div class="form-group has-feedback">
+								<input name="email" type="email" class="form-control" value="admin@admin.com" placeholder="email address">
+								<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 							</div>
+							<div class="form-group has-feedback">
+								<input name="password" type="password" value="password" class="form-control" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<button type="submit" class="btn btn-primary btn-success btn-block btn-flat">Sign In</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+
+			<div class="col-sm-6">
+				<div class="box box-success">
+					<div class="box-header with-border">
+						<h3 class="box-title">Register </h3>
+						<span class="label label-success pull-right"><i class="fa fa-envelope"></i></span>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body">
+						<p>TBD <b> Hopefully soon </b></p>
+
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->
+			<!-- /.box-body -->
+
+		</div>
+
+		<div class="row">
+
+
+			<div class="col-sm-12">
+				<div class="box box-success">
+
+					<!-- /.box-header -->
+					<div class="box-body">
+						<img class="img-responsive " src="/img/homecard.jpg" alt="Photo">
+						<div class="pad">
+							<p>
+								cardSORTER is an online tool in beta stage development to simplify the research process of CARD SORTING. Though similar, this process is fairly different from the cardsorting process used to group and layout content for user interface research. To elaborate,
+							</p>
 						</div>
 						<!-- /.box-body -->
 					</div>
 					<!-- /.box -->
 				</div>
 				<!-- /.col -->
+				<!-- /.box-body -->
+
 			</div>
 
-			<div class="modal-success modal fade bs-example-modal-l" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog " role="document">
+
+
+			<div class="modal-success modal fade bs-example-modal-lg" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title videotitle" id="videotitle">Login to start session</h4>
+							<h4 class="modal-title videotitle" id="videotitle">Modal title</h4>
 						</div>
 						<div class="modal-body">
 							<div class="tagbox">
-
-								<form action="/login" method="POST" name="loginform" role="form">
-									<input type="hidden" name="_token" value="">
-									<div class="form-group has-feedback">
-										<input name="email" type="email" class="form-control" value="admin@admin.com" placeholder="email address">
-										<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-									</div>
-									<div class="form-group has-feedback">
-										<input name="password" type="password" value="password" class="form-control" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-									</div>
-									<div class="row">
-										<div class="col-xs-4">
-											<button type="submit" class="btn btn-primary btn-success btn-block btn-flat">Sign In</button>
-										</div>
-									</div>
-
-								</form>
-
+								<span class="taglabel  bg-yellow"><i class="fa fa-flag-o"></i></span>
 
 							</div>
+							<div class="verdictbox"></div>
+							<div class="healthybars">
+								<p style="font-weight:bold"></p>
 
-
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-outline" data-dismiss="modal">login</button>
-						</div>
+							</div>
+							<div id="videoDiv">
+								<video id="videoplayer" src="/videos/8xFwvE_Khxo.mp4" width="100%" controls>
 					</div>
 				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+				</div>
 			</div>
-		</section>
-		<!-- /.content -->
-	</div>
-	<!-- /.container -->
+		</div>
+		</div>
+
+	</section>
+	<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->

@@ -12,7 +12,9 @@ var session = require('express-session');
 // Get Homepage
 // //Handles Every other page/url request
 router.get("/", function(req, res) {
-    res.render('index', {});
+    res.render('index', {
+        title: "bingoo is big girl"
+    });
 });
 
 router.get("/login", function(req, res) {
