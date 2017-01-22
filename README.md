@@ -15,9 +15,10 @@ cardSORTER is a web based tool being developed to implement the cardsorting meth
 
 
 
-Current Status
+Contributing  
 ---------
-A lot of work needs to be done to get some inital nodejs features working. Feature list is maintained [here.](https://github.com/victordibia/cardsorter/issues/11)
+- Want to contribute? Some documentation on app structure can be [found here.](/app.md)
+- A lot of work needs to be done to get some inital nodejs features working. Feature list is maintained [here.](https://github.com/victordibia/cardsorter/issues/11)
 
 
 Change Log
@@ -32,7 +33,7 @@ Tools
 ---------
 cardSORTER is being developed using the following tools
 
-- [AdminLTE template : ] (https://almsaeedstudio.com/preview)
+- [AdminLTE template : ] (https://almsaeedstudio.com/preview) : A dashboard UI library.
 - Icons :
 
 
