@@ -6,7 +6,7 @@ router.get('/', ensureAuthenticated, function(req, res) {
     res.render('projects', {
         title: "bingoo is big girl",
         user: {
-            name: "Graziado",
+            name: req.user.name,
             authenticated: req.isAuthenticated()
         }
     });

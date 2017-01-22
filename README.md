@@ -2,7 +2,7 @@
 Welcome to cardSORTER Beta!
 ===================
 ![enter image description here](/public/img/homecard.jpg)
-cardSORTER is a web based tool being developed to implement the cardsorting methodology frequently used in social science research .  Potential applications of this tool will be in :
+cardSORTER is an open source web based tool being developed to implement the cardsorting methodology frequently used in social science research.  Potential applications of this tool will be in :
 
 - **Construct Cardsorting** : Sorting items into multiple constructs to verify initial content validity.
 - **Qualitative Text Coding** : Assigning qualitative text data (e.g interview text, forum text data, other things) into defined category.
