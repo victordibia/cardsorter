@@ -16,9 +16,14 @@ var app = express();
 var session = require('express-session');
 var http = require('http');
 var datapi = require('./datapi/datapi');
-var routes = require('./routes/index');
+
 var passport = require('passport');
 var flash = require('connect-flash');
+
+// routes
+var routes = require('./routes/index');
+var projectroute = require('./routes/projects');
+var authroute = require('./routes/auth');
 
 server = http.createServer(app).listen(config.portnumber, function() {
     var addr = server.address();
@@ -62,5 +67,8 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 app.use('/', routes);
+app.use('/auth', authroute);
+app.use('/projects', projectroute);
+
 //Handles all data calls etc
 app.use('/data', datapi);
