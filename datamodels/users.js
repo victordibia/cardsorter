@@ -11,6 +11,7 @@ var users = mongoose.model('users', {
     email: String,
     firstname: String,
     lastname: String,
+    name: String,
     password: String,
     datecreated: Date
 });

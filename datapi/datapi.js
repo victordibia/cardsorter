@@ -9,7 +9,7 @@
 
 var express = require('express');
 var router = express.Router();
-var usermodel = require('../datamodels/user');
+var usermodel = require('../datamodels/users');
 var datagen = require("../datamodels/datagen")
 
 // middleware specific to this router

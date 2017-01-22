@@ -3,9 +3,9 @@
  * description : Generate Sample data
  */
 
-var usermodel = require('./user');
+var usermodel = require('./users');
 
-//createUser(); 
+//createUser();
 
 function createUser() {
     usermodel.deleteAllUsers();
