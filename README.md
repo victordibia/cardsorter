@@ -17,7 +17,7 @@ cardSORTER is a web based tool being developed to implement the cardsorting meth
 
 Current Status
 ---------
-A lot of work needs to be done to get some inital nodejs features working.
+A lot of work needs to be done to get some inital nodejs features working. Feature list is maintained [here.](https://github.com/victordibia/cardsorter/issues/11)
 
 
 Change Log
