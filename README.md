@@ -1,7 +1,7 @@
 
 Welcome to cardSORTER Beta!
 ===================
-
+![enter image description here](/public/img/homecard.jpg)
 cardSORTER is a web based tool being developed to implement the cardsorting methodology frequently used in social science research .  Potential applications of this tool will be in :
 
 - **Construct Cardsorting** : Sorting items into multiple constructs to verify initial content validity.
@@ -10,8 +10,8 @@ cardSORTER is a web based tool being developed to implement the cardsorting meth
 
 **Update** The initial version of the app was done in PHP (old files [here](/old)), but I am currently rewriting the app to work with nodejs. Some rationale behind this [here.](https://github.com/victordibia/cardsorter/issues/2)
 
+![enter image description here](/public/img/screen.jpg)
 
-![enter image description here](/public/img/homecard.jpg)
 
 
 
