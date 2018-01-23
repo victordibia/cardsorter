@@ -1,4 +1,8 @@
 
+
+** Development is currently paused ***
+Please consider using other tools until development is resumed.
+
 Welcome to cardSORTER Beta!
 ===================
 ![enter image description here](/public/img/homecard.jpg)
